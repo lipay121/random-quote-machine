@@ -50,7 +50,9 @@ function App() {
         </div>
         <div className="buttons">
           <a
-            href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${quote.quote}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${quote.quote}" - ${quote.author}`)}`}
             id="tweet-quote"
             style={{
               backgroundColor: randomColor,
